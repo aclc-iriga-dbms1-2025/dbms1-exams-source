@@ -1,0 +1,18 @@
+body {
+    background-color: #101828;
+}
+
+.quiz-title {
+    margin-top: 1.5rem;
+}
+
+.question-card {
+    border: 1px solid #2f3336;
+}
+
+.search-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 1rem 0;
+}
