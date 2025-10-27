@@ -37,6 +37,6 @@ This project is deployed on **GitHub Pages**.
 - Clone the repo:
   ```bash
   git clone https://github.com/aclc-iriga-dbms1-2025/dbms1-exams-source.git
-  cd dbms1-quizzes-source
+  cd dbms1-exams-source
   ```
 - Open index.html in your browser
