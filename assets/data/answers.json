@@ -2,7 +2,480 @@
     "source": {
         "title": "Database Management System 1",
         "questions": [
-            
+            {
+                "question_text": "Choose the letter of the correct answer based on the table EMPLOYEES as shown below.",
+                "image": "assets/images/employees_table.JPG",
+                "question_subtext": "Based on the given SELECT statement below what would be the possible output?",
+                "question_note": "SELECT MOD(SALARY,10) AS “EXCESS SALARY” FROM EMPLOYEES WHERE SALARY < 5000;",
+                "choices": [
+                    {
+                        "text": "3 3 3 3 3 3",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "0 0 0 0 0 0",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "0 0 0 0 0",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "3 3 3 3 3",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Choose the letter of the correct answer based on the table EMPLOYEES as shown below.",
+                "image": "assets/images/v.png",
+                "question_subtext": "What query should be used in order todisplay the firstname and length of firstname rename the column length of firstname as Number of Character of all employees whose salary is between 4400 and 8300",
+                "choices": [
+                    {
+                        "text": "SELECT FIRSTNAME, INSTR(FIRSTNAME) AS \"NUMBER OF CHARACTER\" FROM EMPLOYEES WHERE SALARY BETWEEN 4400 AND 8300;",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT FIRSTNAME, LENGTH(FIRSTNAME) AS NUMBER OF CHARACTER FROM EMPLOYEES WHERE SALARY BETWEEN 4400 AND 8300;",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT FIRSTNAME, LENGTH(FIRSTNAME) AS \"NUMBER OF CHARACTER\" FROM EMPLOYEES WHERE SALARY BETWEEN 8300 AND 4400;",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT FIRSTNAME, LENGTH(FIRSTNAME) AS \"NUMBER OF CHARACTER\" FROM EMPLOYEES WHERE SALARY BETWEEN 4400 AND 8300;",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question_text": "Choose the letter of the correct answer based on the table EMPLOYEES as shown below.",
+                "image": "assets/images/v.png",
+                "question_subtext": "What query should be used in order todisplay a report that trim the letter ‘A’ from lastname of all employees whose department_id between 60 and 90.",
+                "choices": [
+                    {
+                        "text": "SELECT TRIM(LASTNAME,’A’) FROM EMPLOYEES WHERE DEPARTMENT_ID BETWEEN 60 AND 90;",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT TRIM('A' FROM LASTNAME) FROM EMPLOYEES WHERE DEPARTMENT_ID BETWEEN 90 AND 60;",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT TRIM('A' FROM LASTNAME) FROM EMPLOYEES WHERE DEPARTMENT_ID BETWEEN 60 AND 90;",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "SELECT TRIM('A' FROM LASTNAME) FROM EMPLOYEES WHERE DEPARTMENT_ID BETWEEN 60 OR 90;",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Choose the letter of the correct answer based on the table EMPLOYEES as shown below.",
+                "image": "assets/images/v.png",
+                "question_subtext": "What query should be used in order to display the lastname and salary of all employees whose department_id = 60 or job_id like ‘_T%’. Format the salary to be 15 character long, left padded with ‘$’ as special character. Label the column Salary.",
+                "choices": [
+                    {
+                        "text": "SELECT LASTNAME, LPAD(SALARY,15,'$') AS SALARY FROM EMPLOYEES WHERE DEPARTMENT_ID = 60 OR JOB_ID LIKE 'T';",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT LASTNAME, LPAD(SALARY,15,'$') FROM EMPLOYEES WHERE DEPARTMENT_ID = 60 OR JOB_ID LIKE '_T';",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT LASTNAME, RPAD(SALARY,15,'$') AS SALARY FROM EMPLOYEES WHERE DEPARTMENT_ID = 60 OR JOB_ID LIKE '_T';",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT LASTNAME, LPAD(SALARY,15,'$') AS SALARY FROM EMPLOYEES WHERE DEPARTMENT_ID = 60 OR JOB_ID LIKE '_T';",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question_text": "Choose the letter of the correct answer based on the table EMPLOYEES as shown below.",
+                "image": "assets/images/employees_table.JPG",
+                "question_subtext": "Based on the given SELECT statement below what would be the possible output?",
+                "question_note": "SELECT LOWER(LASTNAME||’with a salary of’||SALARY) as Record, LENGTH(LASTNAME) as Lname FROM EMPLOYEES WHERE MANAGER_ID IS NULL OR SALARY IS NULL;",
+                "choices": [
+                    {
+                        "text": "kingwith a salary of 24000                       4 hunoldwith a salary of 2400                     6",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "KINGWITH A SALARY OF 24000                  4 HUNOLDWITH A SALARY OF 2400             6",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "king with a salary of 24000                       4 hunoldwith a salary of 2400                      6",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "KING WITH A SALARY OF 24000                  4 HUNOLDWITH A SALARY OF 2400               6",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Choose the letter of the correct answer based on the table EMPLOYEES as shown below.",
+                "image": "assets/images/employees_table.JPG",
+                "question_subtext": "Based on the given SELECT statement below what would be the possible output?",
+                "question_note": "SELECT FIRSTNAME, SALARY, LPAD(SALARY * 0.10 + SALARY – 100, 8, ‘$’) AS BONUS FROM EMPLOYEES WHERE DEPARTMENT_ID NOT IN (10, 110, 50 AND SALARY=17000;",
+                "choices": [
+                    {
+                        "text": "NENA       17000              $$$17000 LEX          17000              $$$17000",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "NENA       17000              18600$$$ LEX          17000              18600$$$",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "NENA       17000              17000$$$ LEX          17000              17000$$$",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "NENA       17000              $$$18600 LEX          17000              $$$18600",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question_text": "Choose the letter of the correct answer based on the table EMPLOYEES as shown below.",
+                "image": "assets/images/v.png",
+                "question_subtext": "What query should be used in order to display the salary leftpadded with 15 character long and ‘$’ as special character and another column salary right padded with 10 character long with ‘@’ as special character used of all employees in 201, 176 and 144.",
+                "choices": [
+                    {
+                        "text": "SELECT LPAD(SALARY,15,'$'), RPAD(SALARY,10,'@') FROM EMPLOYEES WHERE EMPLOYEE_ID = (201,176,144);",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT LPAD(SALARY,15,'$'), RPAD(SALARY,10,'@') FROM EMPLOYEES WHERE EMPLOYEE_ID IN (201,176,144);",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "SELECT RPAD(SALARY,15,'$'), LPAD(SALARY,10,'@') FROM EMPLOYEES WHERE EMPLOYEE_ID IN (201,176,144);",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT LPAD(SALARY,15,'@'), RPAD(SALARY,10,'$') FROM EMPLOYEES WHERE EMPLOYEE_ID IN (201,176,144);",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Choose the letter of the correct answer based on the table EMPLOYEES as shown below.",
+                "image": "assets/images/employees_table.JPG",
+                "question_subtext": "Based on the given SELECT statement below what would be the possible output?",
+                "question_note": "SELECT TRUNC(563.396,1)FROM DUAL;",
+                "choices": [
+                    {
+                        "text": "563.39",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "500",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "563",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "563.3",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question_text": "Choose the letter of the correct answer based on the table EMPLOYEES as shown below.",
+                "image": "assets/images/employees_table.JPG",
+                "question_subtext": "Based on the given SELECT statement below what would be the possible output?",
+                "question_note": "SELECT LASTNAME,SALARY, RPAD(SALARY,4,’@’) FROM EMPLOYEES WHERE SALARY BETWEEN 4000 AND 9000 LASTNAME LIKE ‘%S’;",
+                "choices": [
+                    {
+                        "text": "MOURGOS                      5800                5800",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "MOURGOS                      5800                5800@@@@ RAJS                                3500                3500@@@@ DAVIES                            3100                3100@@@@ MATOS                             2600                2600@@@@ VARGAS                           2500                2500@@@@ HIGGINS                          12000              12000@@@",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "MOURGOS                      5800                5800@@@@",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "RAJS                               3500                3500 DAVIES                           3100                3100 MATOS                            2600                2600 VARGAS                          2500                2500 HIGGINS                        12000              12000",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "MOURGOS                      5800                5800 DAVIES                            3100                3100",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Choose the letter of the correct answer based on the table EMPLOYEES as shown below.",
+                "image": "assets/images/employees_table.JPG",
+                "question_subtext": "Based on the given SELECT statement below what would be the possible output?",
+                "question_note": "SELECT (LASTNAME||FIRSTNAME), JOB_ID FROM EMPLOYEES WHERE SUBSTR (JOB_ID,4)=’REP’;",
+                "choices": [
+                    {
+                        "text": "ABELELLEN                  SA_REP TALORJONATHAN       SA_REP GRANTKIMBERLY       SA_REP FAYPAT                         MK_REP",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "ABEL ELLEN                  SA_REP TALOR JONATHAN       SA_REP GRAN TKIMBERLY       SA_REP",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "ABELELLEN                  SA_REP",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "ABELELLEN                  SA_REP TALORJONATHAN       SA_REP GRANTKIMBERLY       SA_REP",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Choose the letter of the correct answer based on the table EMPLOYEES as shown below.",
+                "image": "assets/images/employees_table.JPG",
+                "question_subtext": "Based on the given SELECT statement below what would be the possible output?",
+                "question_note": "SELECT TRUNC(563.396,-2) FROM DUAL;",
+                "choices": [
+                    {
+                        "text": "563.39",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "500",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "563",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "563.3",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Choose the letter of the correct answer based on the table EMPLOYEES as shown below.",
+                "image": "assets/images/v.png",
+                "question_subtext": "What query should be used in order toget theSUBSTR  function that returns the job_id = ‘REP’.",
+                "choices": [
+                    {
+                        "text": "SELECT JOB_ID FROM EMPLOYEES WHERE SUBSTR(JOB_ID,4)='REP';",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "SELECT JOB_ID FROM EMPLOYEES WHERE SUBSTR='REP';",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT JOB_ID FROM EMPLOYEES WHERE JOB_ID LIKE ‘%REP%’;",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT JOB_ID FROM EMPLOYEES WHERE SUBSTR(JOB_ID,4)='%REP%';",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Choose the letter of the correct answer based on the table EMPLOYEES as shown below.",
+                "image": "assets/images/employees_table.JPG",
+                "question_subtext": "Based on the given SELECT statement below what would be the possible output?",
+                "question_note": "SELECT INITCAP(LASTNAME||’,’||FIRSTNAME) AS NAME FROM EMPLOYEES WHERE JOB_ID LIKE ’%PR%’;",
+                "choices": [
+                    {
+                        "text": "King,Steven Hunold,Alexander Ernst,Bruce Lorentz,Diana",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "KING,STEVEN HUNOLD,ALEXANDER ERNST,BRUCE LORENTZ,DIANA",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "King’,’Steven Hunold’,’Alexander Ernst’,’Bruce Lorentz’,’Diana",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "king,steven hunold,alexander Ernst,bruce lorentz,Diana",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Choose the letter of the correct answer based on the table EMPLOYEES as shown below.",
+                "image": "assets/images/v.png",
+                "question_subtext": "What query should be used in order to display the firstname concatenated to salary with additional column salary that provides a computation of salary * 2. Rename the column as Increase of all employees whose lastname ends with N.",
+                "choices": [
+                    {
+                        "text": "SELECT (FIRSTNAME || 'SALARY OF' || SALARY || 'IF MULITPLY BY TWO THEN HE/SHE WLL GOT A NEW SALARY OF' || SALARY * 2)AS INCREASE FROM EMPLOYEES WHERE LASTNAME LIKE 'N%';",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT lower(FIRSTNAME || 'SALARY OF' || SALARY || 'IF MULITPLY BY TWO THEN HE/SHE WLL GOT A NEW SALARY OF' || SALARY * 2)AS INCREASE FROM EMPLOYEES WHERE LASTNAME LIKE 'N%';",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT (FIRSTNAME || 'SALARY OF' || SALARY || 'IF MULITPLY BY TWO THEN HE/SHE WLL GOT A NEW SALARY OF' || SALARY * 2)AS INCREASE FROM EMPLOYEES WHERE LASTNAME LIKE '%N';",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "SELECT (FIRSTNAME || 'SALARY OF' SALARY 'IF MULITPLY BY TWO THEN HE/SHE WLL GOT A NEW SALARY OF' || SALARY * 2)AS INCREASE FROM EMPLOYEES WHERE LASTNAME LIKE 'N%';",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Choose the letter of the correct answer based on the table EMPLOYEES as shown below.",
+                "image": "assets/images/employees_table.JPG",
+                "question_subtext": "Based on the given SELECT statement below what would be the possible output?",
+                "question_note": "SELECT TRUNC(563.396,2)FROM DUAL;",
+                "choices": [
+                    {
+                        "text": "563.39",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "500",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "563",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "563.3",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Choose the letter of the correct answer based on the table EMPLOYEES as shown below.",
+                "image": "assets/images/v.png",
+                "question_subtext": "What query should be used in order to display the employees lastname concatenated to salary. Format the salary column to 6 character long left padded with ‘*’ as special character for all employees whose manager_id is null or salary between 4000 and 6000 Rename the column as employees and their Salaries",
+                "choices": [
+                    {
+                        "text": "SELECT (FIRSTNAME||RPAD(SALARY,6,'*')) AS \"EMPLOYEES AND THEIR SALARIES\" FROM EMPLOYEES WHERE MANAGER_ID IS NULL OR SALARY BETWEEN 4000 OR 6000;",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT (FIRSTNAME||RPAD(SALARY,6,'*')) AS \"EMPLOYEES AND THEIR SALARIES\" FROM EMPLOYEES WHERE MANAGER_ID = NULL OR SALARY BETWEEN 4000 AND 6000;",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT (FIRSTNAME||(SALARY,6,'*')) AS \"EMPLOYEES AND THEIR SALARIES\" FROM EMPLOYEES WHERE MANAGER_ID IS NULL OR SALARY BETWEEN 4000 AND 6000;",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT (FIRSTNAME||RPAD(SALARY,6,'*')) AS \"EMPLOYEES AND THEIR SALARIES\" FROM EMPLOYEES WHERE MANAGER_ID IS NULL OR SALARY BETWEEN 4000 AND 6000;",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question_text": "Choose the letter of the correct answer based on the table EMPLOYEES as shown below.",
+                "image": "assets/images/v.png",
+                "question_subtext": "What query should be used in order todisplay the firstname in capitalized format rename the column as pangalan whose job_id is equal to ‘SA_REP’.",
+                "choices": [
+                    {
+                        "text": "SELECT UPPER(FIRSTNAME) AS PANGALAN FROM EMPLOYEES WHERE JOB_ID IS 'SA_REP';",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT FIRSTNAME AS PANGALAN FROM EMPLOYEES WHERE JOB_ID = 'SA_REP';",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT UPPER(FIRSTNAME) PANGALAN FROM EMPLOYEES WHERE JOB_ID = 'SA_REP';",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT UPPER(FIRSTNAME) AS PANGALAN FROM EMPLOYEES WHERE JOB_ID = 'SA_REP';",
+                        "is_correct": true
+                    }
+                ]
+            },
+            {
+                "question_text": "Choose the letter of the correct answer based on the table EMPLOYEES as shown below.",
+                "image": "assets/images/v.png",
+                "question_subtext": "What query should be used in order todisplay the Firstname concatenated to employees original salary plus concatenate again a new column salary that multiplies the original salary into three. Rename the column as Dream Salaries.Note sort the salary in descending order.",
+                "choices": [
+                    {
+                        "text": "SELECT (FIRSTNAME||' EARNS '|| SALARY || 'MONTHLY BUT WANTS' || SALARY * 3) AS \"DREAM SALARIES\" FROM EMPLOYEES ORDER BY SALARY;",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT (FIRSTNAME||' EARNS MONTHLY BUT WANTS' || SALARY * 3) AS \"DREAM SALARIES\" FROM EMPLOYEES ORDER BY SALARY DESC;",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT (FIRSTNAME||' EARNS '|| SALARY || 'MONTHLY BUT WANTS' || SALARY * 3) AS \"DREAM SALARIES\" FROM EMPLOYEES ORDER BY SALARY DESC;",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "SELECT (FIRSTNAME||' EARNS MONTHLY BUT WANTS' || SALARY * 3) AS \"DREAM SALARIES\" FROM EMPLOYEES ORDER BY SALARY;",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Choose the letter of the correct answer based on the table EMPLOYEES as shown below.",
+                "image": "assets/images/v.png",
+                "question_subtext": "What query should be used in order to display the employees lastname concatenated with firstname and with a ‘, (comma)’ in between. A rename on the concatenated column as Complete Name. Note all values in Complete Name column should be in lowercase plus display the length of employees lastname for all employees whose lastname starts with letter M sort the lastname in its default order.",
+                "choices": [
+                    {
+                        "text": "SELECT LOWER(LASTNAME||','||FIRSTNAME) AS \"COMPLETE NAME\", LENGTH(LASTNAME) FROM EMPLOYEES WHERE LASTNAME LIKE 'M%';",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "SELECT LOWER(LASTNAME||','||FIRSTNAME) AS COMPLETE NAME, LENGTH(LASTNAME) FROM EMPLOYEES WHERE LASTNAME LIKE 'M%';",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT LOWER(LASTNAME,FIRSTNAME) AS COMPLETE NAME, LENGTH(LASTNAME) FROM EMPLOYEES WHERE LASTNAME LIKE 'M%';",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "SELECT LOWER(LASTNAME||','||FIRSTNAME) AS COMPLETE NAME, LENGTH(LASTNAME) FROM EMPLOYEES WHERE LASTNAME LIKE '%M';",
+                        "is_correct": false
+                    }
+                ]
+            },
+            {
+                "question_text": "Choose the letter of the correct answer based on the table EMPLOYEES as shown below.",
+                "image": "assets/images/employees_table.JPG",
+                "question_subtext": "Based on the given SELECT statement below what would be the possible output?",
+                "question_note": "SELECT TRIM(‘K’ FROM LASTNAME)AS TRIM, LASTNAME, DEPARTMENT_ID, MANAGER_ID FROM EMPLOYEES WHERE DEPARTMENT_ID = 50 AND MANAGER_ID = 100;",
+                "choices": [
+                    {
+                        "text": "MOURGOS                      MOURGOS    50        100",
+                        "is_correct": true
+                    },
+                    {
+                        "text": "ZLOTKEY                       ZLOTKEY     80        100",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "ZLOYEY                          TRINA     80        200",
+                        "is_correct": false
+                    },
+                    {
+                        "text": "RAJS                                 RAJS               50        124",
+                        "is_correct": false
+                    }
+                ]
+            }
         ]
     }
 }
